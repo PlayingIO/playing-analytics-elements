@@ -1,0 +1,66 @@
+<!-- ANALYTICS MENU -->
+
+<nuxeo-slot-content name="adminAnalyticsMenuItem" slot="ADMINISTRATION_MENU" order="10">
+  <template>
+    <nuxeo-filter user="[[user]]" expression="user.isAdministrator">
+      <template>
+        <mostly-menu-item name="analytics" label="analytics.heading" route="administration:analytics"></mostly-menu-item>
+      </template>
+    </nuxeo-filter>
+  </template>
+</nuxeo-slot-content>
+<nuxeo-slot-content name="adminAnalyticsPage" slot="ADMINISTRATION_PAGES">
+  <template>
+    <nuxeo-filter user="[[user]]" expression="user.isAdministrator">
+      <template>
+        <playing-analytics name="analytics" selected="document-distribution"></playing-analytics>
+      </template>
+    </nuxeo-filter>
+  </template>
+</nuxeo-slot-content>
+
+<!-- TODO: ANALYTICS -->
+
+<nuxeo-slot-content name="analyticsDocumentDistributionItem" slot="ANALYTICS_ITEMS" order="10">
+  <template>
+    <mostly-page-item name="document-distribution" label="analytics.document.distribution"></mostly-page-item>
+  </template>
+</nuxeo-slot-content>
+<nuxeo-slot-content name="analyticsDocumentDistributionPage" slot="ANALYTICS_PAGES" order="10">
+  <template>
+    <playing-distribution-analytics name="document-distribution"></playing-distribution-analytics>
+  </template>
+</nuxeo-slot-content>
+
+<nuxeo-slot-content name="analyticsRepositoryItem" slot="ANALYTICS_ITEMS" order="20">
+  <template>
+    <mostly-page-item name="repository" label="analytics.repository"></mostly-page-item>
+  </template>
+</nuxeo-slot-content>
+<nuxeo-slot-content name="analyticsRepositoryPage" slot="ANALYTICS_PAGES" order="20">
+  <template>
+    <playing-repository-analytics name="repository"></playing-repository-analytics>
+  </template>
+</nuxeo-slot-content>
+
+<nuxeo-slot-content name="analyticsSearchItem" slot="ANALYTICS_ITEMS" order="30">
+  <template>
+    <mostly-page-item name="search" label="analytics.search"></mostly-page-item>
+  </template>
+</nuxeo-slot-content>
+<nuxeo-slot-content name="analyticsSearchPage" slot="ANALYTICS_PAGES" order="30">
+  <template>
+    <playing-search-analytics name="search"></playing-search-analytics>
+  </template>
+</nuxeo-slot-content>
+
+<nuxeo-slot-content name="analyticsWorkflowItem" slot="ANALYTICS_ITEMS" order="40">
+  <template>
+    <mostly-page-item name="workflow" label="analytics.workflow"></mostly-page-item>
+  </template>
+</nuxeo-slot-content>
+<nuxeo-slot-content name="analyticsWorkflowPage" slot="ANALYTICS_PAGES" order="40">
+  <template>
+    <playing-workflow-analytics name="workflow"></playing-workflow-analytics>
+  </template>
+</nuxeo-slot-content>
