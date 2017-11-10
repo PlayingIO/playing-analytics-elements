@@ -2,20 +2,20 @@
 
 <nuxeo-slot-content name="adminAnalyticsMenuItem" slot="ADMINISTRATION_MENU" order="10">
   <template>
-    <nuxeo-filter user="[[user]]" expression="user.isAdministrator">
+    <mostly-filter user="[[user]]" expression="user.isAdministrator">
       <template>
         <mostly-menu-item name="analytics" label="analytics.heading" route="administration:analytics"></mostly-menu-item>
       </template>
-    </nuxeo-filter>
+    </mostly-filter>
   </template>
 </nuxeo-slot-content>
 <nuxeo-slot-content name="adminAnalyticsPage" slot="ADMINISTRATION_PAGES">
   <template>
-    <nuxeo-filter user="[[user]]" expression="user.isAdministrator">
+    <mostly-filter user="[[user]]" expression="user.isAdministrator">
       <template>
         <playing-analytics name="analytics" selected="document-distribution"></playing-analytics>
       </template>
-    </nuxeo-filter>
+    </mostly-filter>
   </template>
 </nuxeo-slot-content>
 
