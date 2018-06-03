@@ -1,7 +1,7 @@
 Playing Analytics Web Components
 ================================
 
-Analytics management web components for playful applications.
+Analytics management web components for building playful applications.
 
 # Usage
 
